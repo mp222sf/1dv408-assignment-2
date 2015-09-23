@@ -1,7 +1,4 @@
 <?php
-
-namespace view;
-
 class LoginView {
 	private static $login = 'LoginView::Login';
 	private static $logout = 'LoginView::Logout';
@@ -136,7 +133,7 @@ class LoginView {
 	}
 	
 	// Checks if the cookies contains the correct information.
-	public function isAlreadyLoggedInCookie(\model\User $user)
+	public function isAlreadyLoggedInCookie(User $user)
 	{
 		$cookie_username = $_COOKIE[self::$cookieName];
 		$cookie_password = $_COOKIE[self::$cookiePassword];

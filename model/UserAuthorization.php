@@ -1,10 +1,7 @@
 <?php
-
-namespace model;
-
 class UserAuthorization {
 
-	public function tryLogin(\model\User $user, $inputUsername, $inputPassword)
+	public function tryLogin(User $user, $inputUsername, $inputPassword)
 	{
 		if ($inputUsername == $user->getUsername() && $inputPassword == $user->getPassword())
 		{
@@ -42,7 +39,7 @@ class UserAuthorization {
 		session_unset();
 	}
 
-	public function isAlreadyLoggedInSession(\model\User $user)
+	public function isAlreadyLoggedInSession(User $user)
 	{
 		if (isset($_SESSION["username"]) && isset($_SESSION["password"])) 
 		{

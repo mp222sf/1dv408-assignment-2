@@ -19,11 +19,11 @@ error_reporting(E_ALL);
 ini_set('display_errors', 'On');
 
 //CREATE OBJECTS OF THE VIEWS
-$dtv = new \view\DateTimeView();
-$lv = new \view\LayoutView();
-$loginUser = new \model\User("Admin", "Password");
-$userAuth = new \model\UserAuthorization();
-$login = new \controller\LoginController($loginUser, $userAuth);
+$dtv = new DateTimeView();
+$lv = new LayoutView();
+$loginUser = new User("Admin", "Password");
+$userAuth = new UserAuthorization();
+$login = new LoginController($loginUser, $userAuth);
 
 $login->doLogin(); 
 

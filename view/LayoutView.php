@@ -1,6 +1,7 @@
 <?php
 
-namespace view;
+
+
 
 // Start sessions.
 session_start();

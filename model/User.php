@@ -1,7 +1,4 @@
 <?php
-
-namespace model;
-
 class User {
 	private $username;
 	private $password;

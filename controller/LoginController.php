@@ -1,8 +1,4 @@
 <?php
-
-namespace controller;
-
-
 class LoginController {
 
 	private $loginView;
@@ -10,8 +6,8 @@ class LoginController {
 	private $userAuth;
 	private $HTMLview;
 
-	public function __construct(\model\User $user, \model\UserAuthorization $userAuth) {
-		$this->loginView = new \view\LoginView();
+	public function __construct(User $user, UserAuthorization $userAuth) {
+		$this->loginView = new LoginView();
 		$this->loginUser = $user;
 		$this->userAuth = $userAuth;
 	}
