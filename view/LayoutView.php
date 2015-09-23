@@ -1,9 +1,13 @@
 <?php
 
+namespace view;
+
+// Start sessions.
+session_start();
 
 class LayoutView {
   
-  public function render($isLoggedIn, LoginView $v, DateTimeView $dtv) {
+  public function render($isLoggedIn, $loginView, $datetimeView) {
     echo '<!DOCTYPE html>
       <html>
         <head>
@@ -15,9 +19,9 @@ class LayoutView {
           ' . $this->renderIsLoggedIn($isLoggedIn) . '
           
           <div class="container">
-              ' . $v->response() . '
+              ' . $loginView . '
               
-              ' . $dtv->show() . '
+              ' . $datetimeView . '
           </div>
          </body>
       </html>
